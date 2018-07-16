@@ -1,17 +1,3 @@
-resources:
-- name: resource-tutorial
-  type: git
-  source:
-    uri: https://github.com/CookieNotSession/concourse-tutorial.git
-    branch: master
-
-jobs:
-- name: job-hello-world
-  public: true
-  plan:
-  - get: resource-tutorial
-  - task: hello-world
-    file: resource-tutorial/tutorials/basic/task-hello-world/task_hello_world.yml
 ---
 platform: linux
 
